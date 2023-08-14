@@ -3,7 +3,7 @@ class CONFIG:
     sort_by = "popularity_desc"  # режим сортировки стандартно popularity_desc
     hold = "8"  # скины с холдом в сколько дней хотим парсить, если хотим парсить все оставляем поле пустым
     login = ""  # логин в стиме
-    password = "asdasd"  # пароль в стиме
+    password = ""  # пароль в стиме
     shared_secret = ""  # находится в мафайле вроде самый первый
     black_list_path = ""  # полный путь до blacklist'а
     white_list_path = ""  # полный путь до whitelist'а
