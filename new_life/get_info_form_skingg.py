@@ -1,4 +1,6 @@
 import json
+import re
+
 import requests
 from item import SkinggItem
 
@@ -88,4 +90,15 @@ class ItemParser:
         item = SkinggItem(item_info["name"], item_info["name_id"], item_info["id"], float(item_info["price"]))
         return item
 
+
+    @staticmethod
+    def get_skingg_item_by_name(name: str) -> 'SkinggItem':
+        return ItemParser.get_skingg_item(ItemParser.get_name_id_from_default_name(name))
+
+    @staticmethod
+    def get_name_id_from_default_name(name: str):
+        name_id = re.sub(r'[^a-zA-Z0-9\s-]', '', name)
+        name_id = re.sub(r'\s+', '-', name_id)
+        name_id = name_id.lower()
+        return name_id
 

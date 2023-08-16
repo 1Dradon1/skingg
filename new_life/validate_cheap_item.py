@@ -8,20 +8,20 @@ def ComparePrices(steam_price: float, skingg_price: float):
 
 
 def should_purchase_item(steam_item, skingg_item, brute_force_mode, item_list) -> bool:
-    if brute_force_mode == 0:
-        if ComparePrices(steam_item.price, skingg_item.price):
-            return True
-
-    elif brute_force_mode == 1:
-        if skingg_item.name not in item_list:
+    if CONFIG.min_price < skingg_item.price < CONFIG.max_price:
+        if brute_force_mode == 0:
             if ComparePrices(steam_item.price, skingg_item.price):
                 return True
 
-    elif brute_force_mode == 2:
-        if skingg_item.name in item_list:
-            if ComparePrices(steam_item.price, skingg_item.price):
-                return True
+        elif brute_force_mode == 1:
+            if skingg_item.name not in item_list:
+                if ComparePrices(steam_item.price, skingg_item.price):
+                    return True
 
+        elif brute_force_mode == 2:
+            if skingg_item.name in item_list:
+                if ComparePrices(steam_item.price, skingg_item.price):
+                    return True
     else:
         return False
 

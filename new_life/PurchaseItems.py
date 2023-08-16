@@ -1,5 +1,4 @@
 import time
-
 from validate_cheap_item import ComparePrices
 from get_info_form_skingg import ItemParser
 import requests
