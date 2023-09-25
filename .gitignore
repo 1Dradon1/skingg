@@ -1,1 +1,5 @@
 new_life/config.py
+new_life/item_buy_log.txt
+new_life/white_list.txt
+new_life/error_log.txt
+new_life/buy_me.txt

@@ -1,11 +1,11 @@
 import json
 import re
-
 import requests
 from item import SkinggItem
+from auth_data import AuthData
 
 
-def request_skingg_page_info(page: str, sort_by: str, hold: str) -> dict:
+def request_skingg_page_info(page: str, sort_by: str, hold: str, proxy) -> dict:
     """
 
     Parameters
@@ -28,12 +28,12 @@ def request_skingg_page_info(page: str, sort_by: str, hold: str) -> dict:
 
     """
 
-    response = requests.get(f"https://skinout.gg/api/market/items?page={page}&sort={sort_by}&hold={hold}")
+    response = requests.get(f"https://skinout.gg/api/market/items?page={page}&sort={sort_by}&hold={hold}", proxies=proxy)
 
     return response.json()
 
 
-def parse_data_from_skingg_page(current_page: int, sort_by: str, hold: str) -> tuple[list, int]:
+def parse_data_from_skingg_page(current_page: int, sort_by: str, hold: str, proxy) -> tuple[list, int]:
     """
 
     Parameters
@@ -68,7 +68,7 @@ def parse_data_from_skingg_page(current_page: int, sort_by: str, hold: str) -> t
 
     """
 
-    page_data = request_skingg_page_info(str(current_page), sort_by, hold)
+    page_data = request_skingg_page_info(str(current_page), sort_by, hold, proxy)
     items = page_data['items']
     page_count = page_data['page_count']
 
@@ -77,23 +77,22 @@ def parse_data_from_skingg_page(current_page: int, sort_by: str, hold: str) -> t
 
 class ItemParser:
     @staticmethod
-    def get_skingg_item_page_info(skingg_item_id: str) -> object:
+    def get_skingg_item_page_info(skingg_item_id: str, proxy) -> object:
         data = {
             'name_id': skingg_item_id
         }
-        response = requests.post("https://skinout.gg/api/market/item", data=json.dumps(data))
+        response = requests.post("https://skinout.gg/api/market/item", data=json.dumps(data), proxies=proxy)
         return response.json()["items"][0]
 
     @staticmethod
-    def get_skingg_item(skingg_item_name_id: str) -> SkinggItem:
-        item_info = ItemParser.get_skingg_item_page_info(skingg_item_name_id)
+    def get_skingg_item(skingg_item_name_id: str, proxy) -> SkinggItem:
+        item_info = ItemParser.get_skingg_item_page_info(skingg_item_name_id, proxy)
         item = SkinggItem(item_info["name"], item_info["name_id"], item_info["id"], float(item_info["price"]))
         return item
 
-
     @staticmethod
-    def get_skingg_item_by_name(name: str) -> 'SkinggItem':
-        return ItemParser.get_skingg_item(ItemParser.get_name_id_from_default_name(name))
+    def get_skingg_item_by_name(name: str, proxy) -> 'SkinggItem':
+        return ItemParser.get_skingg_item(ItemParser.get_name_id_from_default_name(name), proxy)
 
     @staticmethod
     def get_name_id_from_default_name(name: str):
@@ -101,4 +100,7 @@ class ItemParser:
         name_id = re.sub(r'\s+', '-', name_id)
         name_id = name_id.lower()
         return name_id
-
+    @staticmethod
+    def get_user_balance(auth_data: AuthData):
+        response = requests.get("https://skinout.gg/api/account/user", cookies={'PHPSESSID': auth_data.phpsessid_cookie})
+        return response["balance_usd"]

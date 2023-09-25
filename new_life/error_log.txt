@@ -1,24 +1,792 @@
-ОШИБКА! 'median_price' 16ОШИБКА! 'median_price' time.struct_time(tm_year=2023, tm_mon=8, tm_mday=15, tm_hour=16, tm_min=20, tm_sec=16, tm_wday=1, tm_yday=227, tm_isdst=0)ОШИБКА! list index out of range time.struct_time(tm_year=2023, tm_mon=8, tm_mday=15, tm_hour=16, tm_min=32, tm_sec=32, tm_wday=1, tm_yday=227, tm_isdst=0)ОШИБКА! 'NoneType' object is not iterable
-   time.struct_time(tm_year=2023, tm_mon=8, tm_mday=15, tm_hour=22, tm_min=9, tm_sec=32, tm_wday=1, tm_yday=227, tm_isdst=0)
-ОШИБКА! 'NoneType' object is not iterable
-   time.struct_time(tm_year=2023, tm_mon=8, tm_mday=15, tm_hour=22, tm_min=9, tm_sec=38, tm_wday=1, tm_yday=227, tm_isdst=0)
-ОШИБКА! get_skingg_item_by_name() missing 1 required positional argument: 'name'
-   time.struct_time(tm_year=2023, tm_mon=8, tm_mday=15, tm_hour=22, tm_min=12, tm_sec=16, tm_wday=1, tm_yday=227, tm_isdst=0)
-ОШИБКА! get_skingg_item_by_name() missing 1 required positional argument: 'name'
-   time.struct_time(tm_year=2023, tm_mon=8, tm_mday=15, tm_hour=22, tm_min=12, tm_sec=22, tm_wday=1, tm_yday=227, tm_isdst=0)
-ОШИБКА! get_skingg_item_by_name() missing 1 required positional argument: 'name'
-   time.struct_time(tm_year=2023, tm_mon=8, tm_mday=15, tm_hour=22, tm_min=14, tm_sec=31, tm_wday=1, tm_yday=227, tm_isdst=0)
-ОШИБКА! get_skingg_item_by_name() missing 1 required positional argument: 'name'
-   time.struct_time(tm_year=2023, tm_mon=8, tm_mday=15, tm_hour=22, tm_min=14, tm_sec=37, tm_wday=1, tm_yday=227, tm_isdst=0)
-ОШИБКА! get_skingg_item_by_name() missing 1 required positional argument: 'name'
-   time.struct_time(tm_year=2023, tm_mon=8, tm_mday=15, tm_hour=22, tm_min=14, tm_sec=56, tm_wday=1, tm_yday=227, tm_isdst=0)
-ОШИБКА! name 're' is not defined
-   time.struct_time(tm_year=2023, tm_mon=8, tm_mday=15, tm_hour=22, tm_min=15, tm_sec=20, tm_wday=1, tm_yday=227, tm_isdst=0)
-ОШИБКА! 'items'
-   time.struct_time(tm_year=2023, tm_mon=8, tm_mday=15, tm_hour=22, tm_min=15, tm_sec=57, tm_wday=1, tm_yday=227, tm_isdst=0)
-ОШИБКА! 'items'
-   time.struct_time(tm_year=2023, tm_mon=8, tm_mday=15, tm_hour=22, tm_min=16, tm_sec=4, tm_wday=1, tm_yday=227, tm_isdst=0)
-ОШИБКА! 'items'
-   time.struct_time(tm_year=2023, tm_mon=8, tm_mday=15, tm_hour=22, tm_min=18, tm_sec=6, tm_wday=1, tm_yday=227, tm_isdst=0)
-ОШИБКА! 'items'
-   time.struct_time(tm_year=2023, tm_mon=8, tm_mday=15, tm_hour=22, tm_min=18, tm_sec=12, tm_wday=1, tm_yday=227, tm_isdst=0)
+ОШИБКА! Expecting value: line 1 column 1 (char 0) ||| Traceback (most recent call last):
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\skingg\new_life\main.py", line 69, in brute_force
+    skingg_item, steam_item = get_items_to_compare(skingg_item_info)
+  File "D:\skingg\new_life\main.py", line 99, in get_items_to_compare
+    steam_item = SteamItem(skingg_item.name)
+  File "D:\skingg\new_life\item.py", line 32, in __init__
+    self.get_steam_price_by_name()
+  File "D:\skingg\new_life\item.py", line 39, in get_steam_price_by_name
+    parsed_response = response.json()
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+   time.struct_time(tm_year=2023, tm_mon=9, tm_mday=8, tm_hour=14, tm_min=28, tm_sec=26, tm_wday=4, tm_yday=251, tm_isdst=0)
+ОШИБКА! list index out of range ||| Traceback (most recent call last):
+  File "D:\skingg\new_life\main.py", line 69, in brute_force
+    skingg_item, steam_item = get_items_to_compare(skingg_item_info)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\main.py", line 99, in get_items_to_compare
+    steam_item = SteamItem(skingg_item.name)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\item.py", line 32, in __init__
+    self.get_steam_price_by_name()
+  File "D:\skingg\new_life\item.py", line 41, in get_steam_price_by_name
+    price = float(parsed_response['median_avg_prices_15days'][:1][1])
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+   time.struct_time(tm_year=2023, tm_mon=9, tm_mday=10, tm_hour=17, tm_min=34, tm_sec=24, tm_wday=6, tm_yday=253, tm_isdst=0)
+ОШИБКА! list index out of range ||| Traceback (most recent call last):
+  File "D:\skingg\new_life\main.py", line 69, in brute_force
+    skingg_item, steam_item = get_items_to_compare(skingg_item_info)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\main.py", line 99, in get_items_to_compare
+    steam_item = SteamItem(skingg_item.name)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\item.py", line 32, in __init__
+    self.get_steam_price_by_name()
+  File "D:\skingg\new_life\item.py", line 41, in get_steam_price_by_name
+    price = float(parsed_response['median_avg_prices_15days'][:1][1])
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+   time.struct_time(tm_year=2023, tm_mon=9, tm_mday=10, tm_hour=17, tm_min=34, tm_sec=31, tm_wday=6, tm_yday=253, tm_isdst=0)
+ОШИБКА! list index out of range ||| Traceback (most recent call last):
+  File "D:\skingg\new_life\main.py", line 69, in brute_force
+    skingg_item, steam_item = get_items_to_compare(skingg_item_info)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\main.py", line 99, in get_items_to_compare
+    steam_item = SteamItem(skingg_item.name)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\item.py", line 32, in __init__
+    self.get_steam_price_by_name()
+  File "D:\skingg\new_life\item.py", line 41, in get_steam_price_by_name
+    price = float(parsed_response['median_avg_prices_15days'][:1][1])
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+   time.struct_time(tm_year=2023, tm_mon=9, tm_mday=10, tm_hour=17, tm_min=34, tm_sec=38, tm_wday=6, tm_yday=253, tm_isdst=0)
+ОШИБКА! list index out of range ||| Traceback (most recent call last):
+  File "D:\skingg\new_life\main.py", line 69, in brute_force
+    skingg_item, steam_item = get_items_to_compare(skingg_item_info)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\main.py", line 99, in get_items_to_compare
+    steam_item = SteamItem(skingg_item.name)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\item.py", line 32, in __init__
+    self.get_steam_price_by_name()
+  File "D:\skingg\new_life\item.py", line 41, in get_steam_price_by_name
+    price = float(parsed_response['median_avg_prices_15days'][:1][1])
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+   time.struct_time(tm_year=2023, tm_mon=9, tm_mday=10, tm_hour=17, tm_min=34, tm_sec=45, tm_wday=6, tm_yday=253, tm_isdst=0)
+ОШИБКА! list index out of range ||| Traceback (most recent call last):
+  File "D:\skingg\new_life\main.py", line 69, in brute_force
+    skingg_item, steam_item = get_items_to_compare(skingg_item_info)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\main.py", line 99, in get_items_to_compare
+    steam_item = SteamItem(skingg_item.name)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\item.py", line 32, in __init__
+    self.get_steam_price_by_name()
+  File "D:\skingg\new_life\item.py", line 41, in get_steam_price_by_name
+    price = float(parsed_response['median_avg_prices_15days'][:1][1])
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+   time.struct_time(tm_year=2023, tm_mon=9, tm_mday=10, tm_hour=17, tm_min=34, tm_sec=53, tm_wday=6, tm_yday=253, tm_isdst=0)
+ОШИБКА! list index out of range ||| Traceback (most recent call last):
+  File "D:\skingg\new_life\main.py", line 69, in brute_force
+    skingg_item, steam_item = get_items_to_compare(skingg_item_info)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\main.py", line 99, in get_items_to_compare
+    steam_item = SteamItem(skingg_item.name)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\item.py", line 32, in __init__
+    self.get_steam_price_by_name()
+  File "D:\skingg\new_life\item.py", line 41, in get_steam_price_by_name
+    price = float(parsed_response['median_avg_prices_15days'][:1][1])
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+   time.struct_time(tm_year=2023, tm_mon=9, tm_mday=10, tm_hour=17, tm_min=35, tm_sec=0, tm_wday=6, tm_yday=253, tm_isdst=0)
+ОШИБКА! HTTPSConnectionPool(host='api.steamapis.com', port=443): Max retries exceeded with url: /market/item/730/Sticker%20%7C%20Fnatic%20(Holo)%20%7C%20Paris%202023?api_key=fUp2sk5xLwdRRU4IyHZHJAtZUdQ (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)'))) ||| Traceback (most recent call last):
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\urllib3\connectionpool.py", line 467, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\urllib3\connectionpool.py", line 1092, in _validate_conn
+    conn.connect()
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\urllib3\connection.py", line 642, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\urllib3\connection.py", line 783, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\urllib3\util\ssl_.py", line 469, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\urllib3\util\ssl_.py", line 513, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\ssl.py", line 517, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\ssl.py", line 1108, in _create
+    self.do_handshake()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\ssl.py", line 1379, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\urllib3\connectionpool.py", line 491, in _make_request
+    raise new_e
+urllib3.exceptions.SSLError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.steamapis.com', port=443): Max retries exceeded with url: /market/item/730/Sticker%20%7C%20Fnatic%20(Holo)%20%7C%20Paris%202023?api_key=fUp2sk5xLwdRRU4IyHZHJAtZUdQ (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\skingg\new_life\main.py", line 69, in brute_force
+    skingg_item, steam_item = get_items_to_compare(skingg_item_info)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\main.py", line 99, in get_items_to_compare
+    steam_item = SteamItem(skingg_item.name)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\item.py", line 32, in __init__
+    self.get_steam_price_by_name()
+  File "D:\skingg\new_life\item.py", line 35, in get_steam_price_by_name
+    response = requests.get(
+               ^^^^^^^^^^^^^
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\adapters.py", line 517, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='api.steamapis.com', port=443): Max retries exceeded with url: /market/item/730/Sticker%20%7C%20Fnatic%20(Holo)%20%7C%20Paris%202023?api_key=fUp2sk5xLwdRRU4IyHZHJAtZUdQ (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)')))
+
+   time.struct_time(tm_year=2023, tm_mon=9, tm_mday=11, tm_hour=15, tm_min=5, tm_sec=36, tm_wday=0, tm_yday=254, tm_isdst=0)
+ОШИБКА! Expecting value: line 1 column 1 (char 0) ||| Traceback (most recent call last):
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\skingg\new_life\main.py", line 69, in brute_force
+    skingg_item, steam_item = get_items_to_compare(skingg_item_info)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\main.py", line 99, in get_items_to_compare
+    steam_item = SteamItem(skingg_item.name)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\item.py", line 32, in __init__
+    self.get_steam_price_by_name()
+  File "D:\skingg\new_life\item.py", line 39, in get_steam_price_by_name
+    parsed_response = response.json()
+                      ^^^^^^^^^^^^^^^
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+   time.struct_time(tm_year=2023, tm_mon=9, tm_mday=13, tm_hour=1, tm_min=2, tm_sec=30, tm_wday=2, tm_yday=256, tm_isdst=0)
+ОШИБКА! Expecting value: line 1 column 1 (char 0) ||| Traceback (most recent call last):
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\skingg\new_life\main.py", line 69, in brute_force
+    skingg_item, steam_item = get_items_to_compare(skingg_item_info)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\main.py", line 99, in get_items_to_compare
+    steam_item = SteamItem(skingg_item.name)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\item.py", line 32, in __init__
+    self.get_steam_price_by_name()
+  File "D:\skingg\new_life\item.py", line 39, in get_steam_price_by_name
+    parsed_response = response.json()
+                      ^^^^^^^^^^^^^^^
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+   time.struct_time(tm_year=2023, tm_mon=9, tm_mday=21, tm_hour=1, tm_min=52, tm_sec=5, tm_wday=3, tm_yday=264, tm_isdst=0)
+ОШИБКА! Expecting value: line 1 column 1 (char 0) ||| Traceback (most recent call last):
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\skingg\new_life\main.py", line 69, in brute_force
+    skingg_item, steam_item = get_items_to_compare(skingg_item_info)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\main.py", line 99, in get_items_to_compare
+    steam_item = SteamItem(skingg_item.name)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\item.py", line 32, in __init__
+    self.get_steam_price_by_name()
+  File "D:\skingg\new_life\item.py", line 39, in get_steam_price_by_name
+    parsed_response = response.json()
+                      ^^^^^^^^^^^^^^^
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+   time.struct_time(tm_year=2023, tm_mon=9, tm_mday=22, tm_hour=2, tm_min=25, tm_sec=49, tm_wday=4, tm_yday=265, tm_isdst=0)
+ОШИБКА! Expecting value: line 1 column 1 (char 0) ||| Traceback (most recent call last):
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\skingg\new_life\main.py", line 69, in brute_force
+    skingg_item, steam_item = get_items_to_compare(skingg_item_info)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\main.py", line 99, in get_items_to_compare
+    steam_item = SteamItem(skingg_item.name)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\item.py", line 32, in __init__
+    self.get_steam_price_by_name()
+  File "D:\skingg\new_life\item.py", line 39, in get_steam_price_by_name
+    parsed_response = response.json()
+                      ^^^^^^^^^^^^^^^
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+   time.struct_time(tm_year=2023, tm_mon=9, tm_mday=22, tm_hour=2, tm_min=26, tm_sec=37, tm_wday=4, tm_yday=265, tm_isdst=0)
+ОШИБКА! Expecting value: line 1 column 1 (char 0) ||| Traceback (most recent call last):
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\skingg\new_life\main.py", line 69, in brute_force
+    skingg_item, steam_item = get_items_to_compare(skingg_item_info)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\main.py", line 99, in get_items_to_compare
+    steam_item = SteamItem(skingg_item.name)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\item.py", line 32, in __init__
+    self.get_steam_price_by_name()
+  File "D:\skingg\new_life\item.py", line 39, in get_steam_price_by_name
+    parsed_response = response.json()
+                      ^^^^^^^^^^^^^^^
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+   time.struct_time(tm_year=2023, tm_mon=9, tm_mday=22, tm_hour=2, tm_min=26, tm_sec=51, tm_wday=4, tm_yday=265, tm_isdst=0)
+ОШИБКА! Expecting value: line 1 column 1 (char 0) ||| Traceback (most recent call last):
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\skingg\new_life\main.py", line 69, in brute_force
+    skingg_item, steam_item = get_items_to_compare(skingg_item_info)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\main.py", line 99, in get_items_to_compare
+    steam_item = SteamItem(skingg_item.name)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\item.py", line 32, in __init__
+    self.get_steam_price_by_name()
+  File "D:\skingg\new_life\item.py", line 39, in get_steam_price_by_name
+    parsed_response = response.json()
+                      ^^^^^^^^^^^^^^^
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+   time.struct_time(tm_year=2023, tm_mon=9, tm_mday=22, tm_hour=2, tm_min=26, tm_sec=59, tm_wday=4, tm_yday=265, tm_isdst=0)
+ОШИБКА! Expecting value: line 1 column 1 (char 0) ||| Traceback (most recent call last):
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\skingg\new_life\main.py", line 69, in brute_force
+    skingg_item, steam_item = get_items_to_compare(skingg_item_info)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\main.py", line 99, in get_items_to_compare
+    steam_item = SteamItem(skingg_item.name)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\item.py", line 32, in __init__
+    self.get_steam_price_by_name()
+  File "D:\skingg\new_life\item.py", line 39, in get_steam_price_by_name
+    parsed_response = response.json()
+                      ^^^^^^^^^^^^^^^
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+   time.struct_time(tm_year=2023, tm_mon=9, tm_mday=22, tm_hour=2, tm_min=28, tm_sec=14, tm_wday=4, tm_yday=265, tm_isdst=0)
+ОШИБКА! Expecting value: line 1 column 1 (char 0) ||| Traceback (most recent call last):
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\skingg\new_life\main.py", line 69, in brute_force
+    skingg_item, steam_item = get_items_to_compare(skingg_item_info)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\main.py", line 99, in get_items_to_compare
+    steam_item = SteamItem(skingg_item.name)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\item.py", line 32, in __init__
+    self.get_steam_price_by_name()
+  File "D:\skingg\new_life\item.py", line 39, in get_steam_price_by_name
+    parsed_response = response.json()
+                      ^^^^^^^^^^^^^^^
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+   time.struct_time(tm_year=2023, tm_mon=9, tm_mday=22, tm_hour=2, tm_min=28, tm_sec=21, tm_wday=4, tm_yday=265, tm_isdst=0)
+ОШИБКА! Expecting value: line 1 column 1 (char 0) ||| Traceback (most recent call last):
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\skingg\new_life\main.py", line 69, in brute_force
+    skingg_item, steam_item = get_items_to_compare(skingg_item_info)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\main.py", line 99, in get_items_to_compare
+    steam_item = SteamItem(skingg_item.name)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\item.py", line 32, in __init__
+    self.get_steam_price_by_name()
+  File "D:\skingg\new_life\item.py", line 39, in get_steam_price_by_name
+    parsed_response = response.json()
+                      ^^^^^^^^^^^^^^^
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+   time.struct_time(tm_year=2023, tm_mon=9, tm_mday=22, tm_hour=2, tm_min=29, tm_sec=28, tm_wday=4, tm_yday=265, tm_isdst=0)
+ОШИБКА! Expecting value: line 1 column 1 (char 0) ||| Traceback (most recent call last):
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\skingg\new_life\main.py", line 69, in brute_force
+    skingg_item, steam_item = get_items_to_compare(skingg_item_info)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\main.py", line 99, in get_items_to_compare
+    steam_item = SteamItem(skingg_item.name)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\item.py", line 32, in __init__
+    self.get_steam_price_by_name()
+  File "D:\skingg\new_life\item.py", line 39, in get_steam_price_by_name
+    parsed_response = response.json()
+                      ^^^^^^^^^^^^^^^
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+   time.struct_time(tm_year=2023, tm_mon=9, tm_mday=22, tm_hour=2, tm_min=29, tm_sec=39, tm_wday=4, tm_yday=265, tm_isdst=0)
+ОШИБКА! Expecting value: line 1 column 1 (char 0) ||| Traceback (most recent call last):
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\skingg\new_life\main.py", line 69, in brute_force
+    skingg_item, steam_item = get_items_to_compare(skingg_item_info)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\main.py", line 99, in get_items_to_compare
+    steam_item = SteamItem(skingg_item.name)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\item.py", line 32, in __init__
+    self.get_steam_price_by_name()
+  File "D:\skingg\new_life\item.py", line 39, in get_steam_price_by_name
+    parsed_response = response.json()
+                      ^^^^^^^^^^^^^^^
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+   time.struct_time(tm_year=2023, tm_mon=9, tm_mday=22, tm_hour=2, tm_min=29, tm_sec=49, tm_wday=4, tm_yday=265, tm_isdst=0)
+ОШИБКА! Expecting value: line 1 column 1 (char 0) ||| Traceback (most recent call last):
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\skingg\new_life\main.py", line 69, in brute_force
+    skingg_item, steam_item = get_items_to_compare(skingg_item_info)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\main.py", line 99, in get_items_to_compare
+    steam_item = SteamItem(skingg_item.name)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\item.py", line 32, in __init__
+    self.get_steam_price_by_name()
+  File "D:\skingg\new_life\item.py", line 39, in get_steam_price_by_name
+    parsed_response = response.json()
+                      ^^^^^^^^^^^^^^^
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+   time.struct_time(tm_year=2023, tm_mon=9, tm_mday=22, tm_hour=3, tm_min=59, tm_sec=30, tm_wday=4, tm_yday=265, tm_isdst=0)
+ОШИБКА! Expecting value: line 1 column 1 (char 0) ||| Traceback (most recent call last):
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\skingg\new_life\main.py", line 69, in brute_force
+    skingg_item, steam_item = get_items_to_compare(skingg_item_info)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\main.py", line 99, in get_items_to_compare
+    steam_item = SteamItem(skingg_item.name)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\item.py", line 32, in __init__
+    self.get_steam_price_by_name()
+  File "D:\skingg\new_life\item.py", line 39, in get_steam_price_by_name
+    parsed_response = response.json()
+                      ^^^^^^^^^^^^^^^
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+   time.struct_time(tm_year=2023, tm_mon=9, tm_mday=22, tm_hour=3, tm_min=59, tm_sec=48, tm_wday=4, tm_yday=265, tm_isdst=0)
+ОШИБКА! Expecting value: line 1 column 1 (char 0) ||| Traceback (most recent call last):
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\skingg\new_life\main.py", line 69, in brute_force
+    skingg_item, steam_item = get_items_to_compare(skingg_item_info)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\main.py", line 99, in get_items_to_compare
+    steam_item = SteamItem(skingg_item.name)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\item.py", line 32, in __init__
+    self.get_steam_price_by_name()
+  File "D:\skingg\new_life\item.py", line 39, in get_steam_price_by_name
+    parsed_response = response.json()
+                      ^^^^^^^^^^^^^^^
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+   time.struct_time(tm_year=2023, tm_mon=9, tm_mday=22, tm_hour=3, tm_min=59, tm_sec=58, tm_wday=4, tm_yday=265, tm_isdst=0)
+ОШИБКА! Expecting value: line 1 column 1 (char 0) ||| Traceback (most recent call last):
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\skingg\new_life\main.py", line 69, in brute_force
+    skingg_item, steam_item = get_items_to_compare(skingg_item_info)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\main.py", line 99, in get_items_to_compare
+    steam_item = SteamItem(skingg_item.name)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\item.py", line 32, in __init__
+    self.get_steam_price_by_name()
+  File "D:\skingg\new_life\item.py", line 39, in get_steam_price_by_name
+    parsed_response = response.json()
+                      ^^^^^^^^^^^^^^^
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+   time.struct_time(tm_year=2023, tm_mon=9, tm_mday=22, tm_hour=4, tm_min=0, tm_sec=6, tm_wday=4, tm_yday=265, tm_isdst=0)
+ОШИБКА! Expecting value: line 1 column 1 (char 0) ||| Traceback (most recent call last):
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\skingg\new_life\main.py", line 69, in brute_force
+    skingg_item, steam_item = get_items_to_compare(skingg_item_info)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\main.py", line 99, in get_items_to_compare
+    steam_item = SteamItem(skingg_item.name)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\item.py", line 32, in __init__
+    self.get_steam_price_by_name()
+  File "D:\skingg\new_life\item.py", line 39, in get_steam_price_by_name
+    parsed_response = response.json()
+                      ^^^^^^^^^^^^^^^
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+   time.struct_time(tm_year=2023, tm_mon=9, tm_mday=22, tm_hour=4, tm_min=5, tm_sec=53, tm_wday=4, tm_yday=265, tm_isdst=0)
+ОШИБКА! Expecting value: line 1 column 1 (char 0) ||| Traceback (most recent call last):
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\skingg\new_life\main.py", line 69, in brute_force
+    skingg_item, steam_item = get_items_to_compare(skingg_item_info)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\main.py", line 99, in get_items_to_compare
+    steam_item = SteamItem(skingg_item.name)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\item.py", line 32, in __init__
+    self.get_steam_price_by_name()
+  File "D:\skingg\new_life\item.py", line 39, in get_steam_price_by_name
+    parsed_response = response.json()
+                      ^^^^^^^^^^^^^^^
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+   time.struct_time(tm_year=2023, tm_mon=9, tm_mday=22, tm_hour=13, tm_min=31, tm_sec=33, tm_wday=4, tm_yday=265, tm_isdst=0)
+ОШИБКА! Expecting value: line 1 column 1 (char 0) ||| Traceback (most recent call last):
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1520.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\skingg\new_life\main.py", line 69, in brute_force
+    skingg_item, steam_item = get_items_to_compare(skingg_item_info)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\main.py", line 99, in get_items_to_compare
+    steam_item = SteamItem(skingg_item.name)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\skingg\new_life\item.py", line 32, in __init__
+    self.get_steam_price_by_name()
+  File "D:\skingg\new_life\item.py", line 39, in get_steam_price_by_name
+    parsed_response = response.json()
+                      ^^^^^^^^^^^^^^^
+  File "C:\Users\grish\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+   time.struct_time(tm_year=2023, tm_mon=9, tm_mday=22, tm_hour=13, tm_min=31, tm_sec=40, tm_wday=4, tm_yday=265, tm_isdst=0)

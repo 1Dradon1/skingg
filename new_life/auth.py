@@ -35,4 +35,5 @@ def make_auth(login: str, password: str, shared_secret: str):
     phpsessid_cookie = driver.get_cookie("PHPSESSID")
 
     auth_data = AuthData(token, phpsessid_cookie["value"])
+    driver.quit()
     return auth_data
